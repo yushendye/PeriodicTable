@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/color2"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:onClick="closedialog"
+        android:layout_alignParentRight="true"
+        android:src="@android:drawable/btn_dialog"/>
+
+    <TableLayout
+        android:id="@+id/tbl_info"
+        android:divider="#000000"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <TableRow android:layout_margin="5dp">
+            <ImageView
+                android:id="@+id/elementImg"
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher_foreground">
+            </ImageView>
+        </TableRow>
+        <TableRow android:layout_margin="5dp">
+            <TextView android:text="Symbol" android:textSize="15dp"
+                android:textColor="#000000"> </TextView>
+            <TextView
+                android:id="@+id/element_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="#000000"
+                android:text="Symbol of element"
+                android:layout_below="@id/elementImg">
+            </TextView>
+        </TableRow>
+        <TableRow android:layout_margin="5dp">
+            <TextView android:text="Name" android:textSize="15dp"
+                android:textColor="#000000"> </TextView>
+
+            <TextView
+                android:id="@+id/element_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/elementImg"
+                android:layout_centerHorizontal="true"
+                android:drawableRight="@android:drawable/ic_lock_silent_mode_off"
+                android:text="Name of element"
+                android:textColor="#000000"
+                android:textSize="15dp"></TextView>
+        </TableRow>
+
+        <TableRow android:layout_margin="5dp">
+            <TextView android:text="Atomic Number" android:textSize="15dp"
+                android:textColor="#000000"> </TextView>
+            <TextView
+                android:id="@+id/atomic_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_marginLeft="5dp"
+                android:textSize="15dp"
+                android:layout_below="@id/element_name"
+                android:text="Atomic Number">
+            </TextView>
+        </TableRow>
+        <TableRow android:layout_margin="5dp">
+            <TextView android:text="Atomic Weight" android:textSize="15dp"
+                android:textColor="#000000"> </TextView>
+            <TextView
+                android:id="@+id/element_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:layout_below="@id/element_name"
+                android:layout_centerHorizontal="true"
+                android:text="Weight of element">
+            </TextView>
+        </TableRow>
+        <TableRow android:layout_margin="5dp">
+            <TextView android:text="Discovered By" android:textSize="15dp"
+                android:textColor="#000000"> </TextView>
+            <TextView
+                android:id="@+id/element_discoverer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:layout_below="@id/element_name"
+                android:layout_centerHorizontal="true"
+                android:text="Discovered by">
+            </TextView>
+        </TableRow>
+        <TableRow android:layout_margin="5dp">
+            <TextView android:text="Appearance" android:textSize="15dp"
+                android:textColor="#000000"> </TextView>
+            <TextView
+                android:id="@+id/element_appearance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:layout_below="@id/element_name"
+                android:layout_centerHorizontal="true"
+                android:text="Appearance">
+            </TextView>
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_read_info"
+        android:gravity="center"
+        android:layout_below="@id/tbl_info"
+        android:layout_width="match_parent"
+        android:textColor="@color/pureBlack"
+        android:text="Read out information to me!"
+        android:drawableTop="@android:drawable/ic_lock_silent_mode_off" />
+
+</RelativeLayout>
